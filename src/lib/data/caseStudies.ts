@@ -6,8 +6,10 @@ export type CaseStudy = {
   description: string;
   features: string[];
   techStack: string[];
-  /** Accent tone for placeholder visual */
+  /** Accent tone for placeholder / overlay */
   accent: "blue" | "cyan" | "indigo" | "teal" | "violet" | "sky";
+  /** Cover image under /public/portfolio */
+  image: string;
   featured?: boolean;
 };
 
@@ -31,6 +33,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Flutter", "Node.js", "Express.js", "MongoDB", "Redis"],
     accent: "blue",
+    image: "/portfolio/isc-digital-banking-platform.png",
     featured: true,
   },
   {
@@ -54,6 +57,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Flutter", "Node.js", "Express.js", "MongoDB", "Cloudinary"],
     accent: "cyan",
+    image: "/portfolio/edusphere-school-management-platform.png",
     featured: true,
   },
   {
@@ -74,6 +78,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "Node.js", "MongoDB", "Redis"],
     accent: "indigo",
+    image: "/portfolio/inventoryflow-management-suite.png",
     featured: true,
   },
   {
@@ -93,6 +98,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "Node.js", "FFmpeg", "MongoDB"],
     accent: "violet",
+    image: "/portfolio/mediaflow-downloader-suite.png",
     featured: true,
   },
   {
@@ -113,6 +119,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "NestJS", "PostgreSQL", "Redis", "AWS"],
     accent: "teal",
+    image: "/portfolio/carelink-health-os.png",
   },
   {
     slug: "novamind-automation-hub",
@@ -131,6 +138,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "Python", "OpenAI", "LangChain", "MongoDB"],
     accent: "sky",
+    image: "/portfolio/novamind-automation-hub.png",
   },
   {
     slug: "routepeak-logistics-cloud",
@@ -149,6 +157,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Flutter", "Node.js", "PostgreSQL", "Redis", "Docker"],
     accent: "blue",
+    image: "/portfolio/routepeak-logistics-cloud.png",
   },
   {
     slug: "relaysales-crm",
@@ -167,6 +176,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "NestJS", "PostgreSQL", "Redis"],
     accent: "cyan",
+    image: "/portfolio/relaysales-crm.png",
   },
   {
     slug: "peoplegrid-hr-suite",
@@ -185,6 +195,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["React", "Node.js", "MongoDB", "AWS"],
     accent: "indigo",
+    image: "/portfolio/peoplegrid-hr-suite.png",
   },
   {
     slug: "merchantbay-commerce-os",
@@ -203,6 +214,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "Node.js", "MongoDB", "Redis", "Cloudinary"],
     accent: "teal",
+    image: "/portfolio/merchantbay-commerce-os.png",
   },
   {
     slug: "estateatlas-property-platform",
@@ -221,6 +233,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     techStack: ["Next.js", "Express.js", "MongoDB", "Cloudinary"],
     accent: "violet",
+    image: "/portfolio/estateatlas-property-platform.png",
   },
 ];
 

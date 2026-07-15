@@ -25,7 +25,12 @@ function CaseStudyCard({
       >
         <CaseStudyVisual
           study={study}
-          className={featured ? "min-h-[260px] lg:min-h-full" : "min-h-[200px]"}
+          className={
+            featured
+              ? "min-h-[260px] lg:min-h-full lg:h-full"
+              : "min-h-[220px]"
+          }
+          priority={index < 2 && featured}
         />
         <div className="flex flex-col p-6 sm:p-8">
           <span className="inline-flex w-fit rounded-full border border-accent/30 bg-accent/10 px-2.5 py-0.5 font-display text-[10px] font-semibold tracking-wider text-accent-bright uppercase">
