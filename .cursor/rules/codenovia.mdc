@@ -1,0 +1,17 @@
+---
+description: CodeNovia website brand and build constraints
+globs:
+  - "src/**/*"
+alwaysApply: true
+---
+
+# CodeNovia
+
+- Stack: Next.js App Router + TypeScript + Tailwind v4 + Framer Motion. No custom backend; contact uses Formspree later.
+- Brand: deep navy `#050B18`, accent cyan/blue `#1E9BFF` / `#3DB4FF`, fonts Outfit (display) + DM Sans (body). Dark premium tech look.
+- Primary CTA label: "Let's Talk Business" → `/contact`.
+- Logo: temporary SVG in `components/brand/Logo.tsx` — swap later in one place.
+- Content: prefer `src/lib/data/*` over hardcoding copy in many files.
+- Do not redesign the Home visual language; match existing sections when adding pages.
+- Out of scope for v1: CMS, auth, Three.js, light mode, i18n, blog posts.
+- **Git/GitHub:** Never run git or GitHub commands (`git init`, commit, push, gh, etc.). The user handles all git/GitHub themselves. Do not create or modify `.gitignore` unless they explicitly ask.
