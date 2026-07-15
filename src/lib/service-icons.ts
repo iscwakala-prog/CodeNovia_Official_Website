@@ -1,0 +1,31 @@
+import {
+  Bot,
+  Boxes,
+  Cloud,
+  Code2,
+  Compass,
+  LayoutTemplate,
+  LineChart,
+  Smartphone,
+  Sparkles,
+  Workflow,
+  type LucideIcon,
+} from "lucide-react";
+
+export const serviceIcons: Record<string, LucideIcon> = {
+  "saas-product-engineering": Boxes,
+  "enterprise-software-development": Workflow,
+  "web-platform-engineering": Code2,
+  "mobile-app-engineering": Smartphone,
+  "cms-wordpress-solutions": LayoutTemplate,
+  "ai-integration-automation": Bot,
+  "ai-powered-business-solutions": Sparkles,
+  "workflow-automation-systems": Workflow,
+  "product-design-ux": Sparkles,
+  "design-systems-interface": LayoutTemplate,
+  "cloud-infrastructure-devops": Cloud,
+  "scalable-systems-architecture": Cloud,
+  "digital-transformation-consulting": Compass,
+  "technology-strategy-consulting": Compass,
+  "digital-marketing-growth": LineChart,
+};

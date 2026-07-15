@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
 import { Container } from "@/components/ui/Container";
 import { ctaLabel, navLinks } from "@/lib/data/nav";
-import { services } from "@/lib/data/services";
+import { coreServices } from "@/lib/data/services";
 
 export function Footer() {
   return (
@@ -38,10 +38,10 @@ export function Footer() {
             Services
           </h3>
           <ul className="space-y-2.5">
-            {services.map((service) => (
+            {coreServices.slice(0, 6).map((service) => (
               <li key={service.slug}>
                 <Link
-                  href="/services"
+                  href={`/services#${service.slug}`}
                   className="text-sm text-text-muted transition hover:text-accent-bright"
                 >
                   {service.title}

@@ -104,6 +104,21 @@ body {
   animation: hero-beam 7s ease-in-out infinite;
 }
 
+@keyframes services-headline-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.services-headline-glow {
+  background-size: 200% auto;
+  animation: services-headline-shimmer 5s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -120,7 +135,8 @@ body {
   .hero-aurora,
   .hero-aurora-delay,
   .hero-pulse,
-  .hero-beam {
+  .hero-beam,
+  .services-headline-glow {
     animation: none !important;
   }
 }
