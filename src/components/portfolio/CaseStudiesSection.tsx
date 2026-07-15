@@ -9,28 +9,20 @@ import { caseStudies, type CaseStudy } from "@/lib/data/caseStudies";
 function CaseStudyCard({
   study,
   index,
-  featured,
 }: {
   study: CaseStudy;
   index: number;
-  featured?: boolean;
 }) {
   return (
     <Reveal delay={Math.min(index * 0.05, 0.3)}>
       <article
         id={study.slug}
-        className={`group scroll-mt-28 overflow-hidden rounded-2xl border border-border bg-bg-elevated/40 transition duration-300 hover:border-accent/40 ${
-          featured ? "lg:grid lg:grid-cols-2" : ""
-        }`}
+        className="group scroll-mt-28 overflow-hidden rounded-2xl border border-border bg-bg-elevated/40 transition duration-300 hover:border-accent/40 lg:grid lg:grid-cols-2"
       >
         <CaseStudyVisual
           study={study}
-          className={
-            featured
-              ? "min-h-[260px] lg:min-h-full lg:h-full"
-              : "min-h-[220px]"
-          }
-          priority={index < 2 && featured}
+          className="min-h-[260px] lg:h-full lg:min-h-full"
+          priority={index < 2}
         />
         <div className="flex flex-col p-6 sm:p-8">
           <span className="inline-flex w-fit rounded-full border border-accent/30 bg-accent/10 px-2.5 py-0.5 font-display text-[10px] font-semibold tracking-wider text-accent-bright uppercase">
@@ -51,7 +43,7 @@ function CaseStudyCard({
               Key capabilities
             </p>
             <ul className="grid gap-1.5 sm:grid-cols-2">
-              {study.features.slice(0, featured ? 8 : 6).map((feature) => (
+              {study.features.slice(0, 8).map((feature) => (
                 <li
                   key={feature}
                   className="flex items-start gap-2 text-sm text-text-muted"
@@ -94,9 +86,6 @@ function CaseStudyCard({
 }
 
 export function CaseStudiesSection() {
-  const featured = caseStudies.filter((s) => s.featured);
-  const more = caseStudies.filter((s) => !s.featured);
-
   return (
     <Section id="case-studies">
       <Reveal>
@@ -115,19 +104,7 @@ export function CaseStudiesSection() {
       </Reveal>
 
       <div className="space-y-8">
-        {featured.map((study, i) => (
-          <CaseStudyCard key={study.slug} study={study} index={i} featured />
-        ))}
-      </div>
-
-      <Reveal className="mt-16 mb-8">
-        <h3 className="font-display text-2xl font-bold text-white">
-          More solutions across industries
-        </h3>
-      </Reveal>
-
-      <div className="grid gap-6 lg:grid-cols-2">
-        {more.map((study, i) => (
+        {caseStudies.map((study, i) => (
           <CaseStudyCard key={study.slug} study={study} index={i} />
         ))}
       </div>
