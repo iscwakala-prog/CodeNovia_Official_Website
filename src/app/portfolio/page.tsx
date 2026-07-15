@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Section } from "@/components/ui/Section";
+import { CaseStudiesSection } from "@/components/portfolio/CaseStudiesSection";
+import { PortfolioFinalCta } from "@/components/portfolio/PortfolioFinalCta";
+import { PortfolioHero } from "@/components/portfolio/PortfolioHero";
+import { PortfolioIndustries } from "@/components/portfolio/PortfolioIndustries";
+import { PortfolioMetrics } from "@/components/portfolio/PortfolioMetrics";
+import { PortfolioProcessSection } from "@/components/portfolio/PortfolioProcessSection";
+import { PortfolioTech } from "@/components/portfolio/PortfolioTech";
+import { PortfolioTestimonials } from "@/components/portfolio/PortfolioTestimonials";
 
 export const metadata: Metadata = {
   title: "Portfolio",
+  description:
+    "Explore CodeNovia case studies—FinTech, EdTech, enterprise operations, AI automation and more. Products engineered for scale.",
 };
 
 export default function PortfolioPage() {
   return (
-    <Section className="pt-28">
-      <h1 className="font-display text-4xl font-bold text-white">Portfolio</h1>
-      <p className="mt-4 text-text-muted">
-        Full portfolio page coming next.{" "}
-        <Link href="/" className="text-accent-bright hover:underline">
-          Back to Home
-        </Link>
-      </p>
-    </Section>
+    <>
+      <PortfolioHero />
+      <PortfolioMetrics />
+      <CaseStudiesSection />
+      <PortfolioIndustries />
+      <PortfolioTech />
+      <PortfolioProcessSection />
+      <PortfolioTestimonials />
+      <PortfolioFinalCta />
+    </>
   );
 }

@@ -7,7 +7,7 @@ alwaysApply: true
 
 # CodeNovia
 
-- Stack: Next.js App Router + TypeScript + Tailwind v4 + Framer Motion. No custom backend; contact uses Formspree later.
+- Stack: Next.js App Router + TypeScript + Tailwind v4 + Framer Motion. Contact form sends lead emails via Nodemailer SMTP (`/api/contact`) with Reply-To set to the client email.
 - Brand: deep navy `#050B18`, accent cyan/blue `#1E9BFF` / `#3DB4FF`, fonts Outfit (display) + DM Sans (body). Dark premium tech look.
 - Primary CTA label: "Let's Talk Business" → `/contact`.
 - Logo: temporary SVG in `components/brand/Logo.tsx` — swap later in one place.

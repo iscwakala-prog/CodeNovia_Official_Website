@@ -106,9 +106,8 @@ export function AboutHero() {
             transition={{ duration: 0.55, delay: 0.4 }}
           >
             CodeNovia is a technology company building software products, AI
-            solutions, and digital infrastructure for businesses worldwide. We
-            are not a software house—we are an engineering partner for teams with
-            global ambitions.
+            solutions, and digital infrastructure for businesses worldwide—an
+            engineering partner for teams with global ambitions.
           </motion.p>
 
           <motion.div

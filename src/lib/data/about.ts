@@ -12,7 +12,7 @@ export const aboutVision = {
 
 export const whoWeAre = {
   eyebrow: "Who We Are",
-  title: "A technology company—not a software house",
+  title: "A technology company built for ambitious teams",
   paragraphs: [
     "CodeNovia is a premium technology company engineering software products, AI solutions, and digital infrastructure for businesses worldwide. We partner with startups, SMEs, and enterprises that refuse to treat technology as an afterthought.",
     "We solve the problems that hold ambitious teams back: fragmented systems, products that don't scale, manual operations that drain talent, and digital experiences that fail to convert. Our work replaces complexity with clarity—and replaces short-term fixes with platforms built to last.",
