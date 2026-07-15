@@ -13,7 +13,7 @@ export function CaseStudyVisual({
 }) {
   return (
     <div
-      className={`relative overflow-hidden rounded-xl border border-border bg-bg-deep ${className}`}
+      className={`keep-white relative overflow-hidden rounded-xl border border-border bg-bg-deep ${className}`}
     >
       <Image
         src={study.image}

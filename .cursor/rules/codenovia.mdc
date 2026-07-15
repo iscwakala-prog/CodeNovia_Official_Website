@@ -13,5 +13,6 @@ alwaysApply: true
 - Logo: temporary SVG in `components/brand/Logo.tsx` — swap later in one place.
 - Content: prefer `src/lib/data/*` over hardcoding copy in many files.
 - Do not redesign the Home visual language; match existing sections when adding pages.
-- Out of scope for v1: CMS, auth, Three.js, light mode, i18n, blog posts.
+- Theme: default dark; light theme via header toggle (`data-theme` / `html.light`). Persist in `localStorage` key `codenovia-theme`.
+- Out of scope for v1: CMS, auth, Three.js, i18n, blog posts.
 - **Git/GitHub:** Never run git or GitHub commands (`git init`, commit, push, gh, etc.). The user handles all git/GitHub themselves. Do not create or modify `.gitignore` unless they explicitly ask.

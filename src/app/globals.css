@@ -12,6 +12,28 @@
   --border: rgba(255, 255, 255, 0.08);
 }
 
+html.light,
+html[data-theme="light"] {
+  --bg-deep: #f4f7fc;
+  --bg-surface: #e8eef8;
+  --bg-elevated: #ffffff;
+  --accent: #1a8aef;
+  --accent-bright: #0b6fd4;
+  --accent-glow: rgba(26, 138, 239, 0.28);
+  --text: #0a1628;
+  --text-muted: #5a6b82;
+  --border: rgba(10, 22, 40, 0.1);
+}
+
+html {
+  color-scheme: dark;
+}
+
+html.light,
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
 @theme inline {
   --color-bg-deep: var(--bg-deep);
   --color-bg-surface: var(--bg-surface);
@@ -43,11 +65,52 @@ body {
 .glow-accent {
   box-shadow:
     0 0 24px var(--accent-glow),
-    0 0 48px rgba(30, 155, 255, 0.2);
+    0 0 48px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+html.light .glow-accent,
+html[data-theme="light"] .glow-accent {
+  box-shadow:
+    0 0 16px var(--accent-glow),
+    0 4px 20px rgba(10, 22, 40, 0.08);
 }
 
 .text-glow {
   text-shadow: 0 0 32px var(--accent-glow);
+}
+
+html.light .text-glow,
+html[data-theme="light"] .text-glow {
+  text-shadow: none;
+}
+
+/* Theme-aware white text: body copy uses theme tokens; keep white on accents/images */
+html.light .text-white,
+html[data-theme="light"] .text-white {
+  color: var(--text);
+}
+
+html.light .bg-accent.text-white,
+html.light .bg-accent-bright.text-white,
+html.light .glow-accent.text-white,
+html[data-theme="light"] .bg-accent.text-white,
+html[data-theme="light"] .bg-accent-bright.text-white,
+html[data-theme="light"] .glow-accent.text-white {
+  color: #ffffff;
+}
+
+html.light .keep-white,
+html.light .keep-white *,
+html[data-theme="light"] .keep-white,
+html[data-theme="light"] .keep-white * {
+  color: #ffffff !important;
+}
+
+html.light .hero-aurora,
+html.light .hero-aurora-delay,
+html[data-theme="light"] .hero-aurora,
+html[data-theme="light"] .hero-aurora-delay {
+  opacity: 0.35;
 }
 
 @keyframes hero-aurora {

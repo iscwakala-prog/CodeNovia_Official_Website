@@ -8,8 +8,8 @@ const variants: Record<Variant, string> = {
   primary:
     "bg-accent text-white hover:bg-accent-bright glow-accent border border-transparent",
   outline:
-    "border border-white/25 bg-transparent text-white hover:border-accent hover:text-accent-bright",
-  ghost: "bg-transparent text-white hover:bg-white/5",
+    "border border-border bg-transparent text-text hover:border-accent hover:text-accent-bright",
+  ghost: "bg-transparent text-text hover:bg-accent/5",
 };
 
 const sizes: Record<Size, string> = {

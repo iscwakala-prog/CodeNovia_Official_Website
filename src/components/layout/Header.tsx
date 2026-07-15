@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "@/components/brand/Logo";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { ctaLabel, navLinks } from "@/lib/data/nav";
 
 export function Header() {
@@ -41,7 +42,10 @@ export function Header() {
       }`}
     >
       <Container className="flex h-16 items-center justify-between gap-4 sm:h-[72px]">
-        <Logo />
+        <div className="flex items-center gap-3 sm:gap-4">
+          <Logo />
+          <ThemeToggle />
+        </div>
 
         <nav
           className="hidden items-center gap-8 xl:gap-10 lg:flex"
@@ -56,7 +60,7 @@ export function Header() {
                 className={`font-display text-[13px] font-medium tracking-wide transition ${
                   active
                     ? "text-accent-bright"
-                    : "text-text-muted hover:text-white"
+                    : "text-text-muted hover:text-text"
                 }`}
               >
                 {link.label}
@@ -73,7 +77,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-white lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-md text-text lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -94,8 +98,8 @@ export function Header() {
                     href={link.href}
                     className={`rounded-md px-3 py-3 font-display text-base font-medium ${
                       active
-                        ? "bg-white/5 text-accent-bright"
-                        : "text-text-muted hover:bg-white/5 hover:text-white"
+                        ? "bg-accent/10 text-accent-bright"
+                        : "text-text-muted hover:bg-accent/5 hover:text-text"
                     }`}
                   >
                     {link.label}

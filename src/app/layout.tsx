@@ -30,12 +30,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const themeBootScript = `(function(){try{var k='codenovia-theme';var t=localStorage.getItem(k);if(t!=='light'&&t!=='dark')t='dark';var r=document.documentElement;r.dataset.theme=t;r.classList.toggle('light',t==='light');r.classList.toggle('dark',t==='dark');}catch(e){}})();`;
+
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${outfit.variable} ${dmSans.variable} dark h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="flex min-h-full flex-col bg-bg-deep font-sans text-text">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+      </head>
+      <body className="flex min-h-full flex-col bg-bg-deep font-sans text-text transition-colors duration-300">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
