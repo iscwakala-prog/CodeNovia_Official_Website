@@ -43,7 +43,7 @@ export function buildLeadEmailHtml(data: ContactFormValues): string {
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:640px;background:#0a1528;border:1px solid #1e2a3f;border-radius:14px;overflow:hidden;">
           <tr>
             <td style="padding:28px 28px 20px;background:linear-gradient(135deg,#0f1c34 0%,#0a1528 100%);border-bottom:1px solid #1e2a3f;">
-              <p style="margin:0 0 8px;color:#3db4ff;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;">
+              <p style="margin:0 0 8px;color:#3db4ff;font-size:12px;letter-spacing:0.5px;font-weight:700;">
                 CodeNovia
               </p>
               <h1 style="margin:0;color:#ffffff;font-size:22px;line-height:1.3;font-weight:700;">

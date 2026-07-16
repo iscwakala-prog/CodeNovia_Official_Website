@@ -53,7 +53,7 @@ export function AboutHero() {
       <div className="relative z-10 mx-auto w-full px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-14">
         <div className="max-w-4xl">
           <motion.p
-            className="mb-4 inline-flex items-center gap-2 font-display text-xs font-semibold tracking-[0.2em] text-accent-bright uppercase"
+            className="mb-4 inline-flex items-center gap-2 font-display text-xs font-semibold tracking-wide text-accent-bright"
             initial={reduce ? false : { opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}

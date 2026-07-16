@@ -50,8 +50,8 @@ export function Logo({ className = "", showWordmark = true }: LogoProps) {
         </svg>
       </span>
       {showWordmark && (
-        <span className="font-display text-[15px] font-bold tracking-[0.14em] text-text sm:text-base">
-          CODENOVIA
+        <span className="font-display text-[15px] font-bold tracking-tight text-text sm:text-base">
+          CodeNovia
         </span>
       )}
     </Link>

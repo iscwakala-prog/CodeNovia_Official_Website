@@ -263,7 +263,7 @@ export function AboutSections() {
       {/* Why Choose */}
       <Section className="bg-bg-surface/40">
         <Reveal>
-          <p className="mb-3 font-display text-xs font-semibold tracking-[0.2em] text-accent-bright uppercase">
+          <p className="mb-3 font-display text-xs font-semibold tracking-wide text-accent-bright">
             Why Businesses Choose CodeNovia
           </p>
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">

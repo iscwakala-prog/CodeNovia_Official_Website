@@ -34,7 +34,7 @@ export function Hero() {
       <Container className="relative z-10 grid min-h-[calc(100svh-6rem)] items-start gap-10 pt-2 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-8 lg:pt-6 xl:gap-12 xl:pt-8">
         <div className="max-w-2xl pt-1 text-center lg:max-w-xl lg:pt-4 lg:text-left xl:max-w-2xl">
           <motion.p
-            className="mb-3 font-display text-xs font-semibold tracking-[0.2em] text-accent-bright uppercase sm:mb-4"
+            className="mb-3 font-display text-xs font-semibold tracking-wide text-accent-bright sm:mb-4"
             initial={reduce ? false : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
