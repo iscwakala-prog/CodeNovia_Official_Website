@@ -4,6 +4,10 @@ export const contactInfo = {
   phoneHref: "tel:+923135802592",
   whatsapp: "+92 313 5802592",
   whatsappHref: "https://wa.me/923135802592",
+  facebook: "https://www.facebook.com/Codenovia",
+  facebookLabel: "Follow on Facebook",
+  instagram: "https://www.instagram.com/codenovia/",
+  instagramLabel: "Follow on Instagram",
   linkedin: "https://www.linkedin.com/",
   linkedinLabel: "Connect with Our Team",
 } as const;

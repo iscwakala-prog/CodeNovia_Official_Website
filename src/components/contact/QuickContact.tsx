@@ -1,11 +1,10 @@
-import {
-  Mail,
-  MessageCircle,
-  Phone,
-  ArrowUpRight,
-  Share2,
-} from "lucide-react";
+import { Mail, Phone, ArrowUpRight, Share2 } from "lucide-react";
 import Link from "next/link";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  WhatsAppIcon,
+} from "@/components/icons/SocialIcons";
 import { Reveal } from "@/components/motion/Reveal";
 import { contactInfo } from "@/lib/data/contact";
 
@@ -25,11 +24,25 @@ const cards = [
     cta: contactInfo.phone,
   },
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     title: "WhatsApp",
     description: "Start a fast conversation with our team on WhatsApp.",
     href: contactInfo.whatsappHref,
     cta: "Start a Conversation",
+  },
+  {
+    icon: FacebookIcon,
+    title: "Facebook",
+    description: "Follow CodeNovia for updates, insights, and company news.",
+    href: contactInfo.facebook,
+    cta: contactInfo.facebookLabel,
+  },
+  {
+    icon: InstagramIcon,
+    title: "Instagram",
+    description: "See our work, culture, and behind-the-scenes moments.",
+    href: contactInfo.instagram,
+    cta: contactInfo.instagramLabel,
   },
   {
     icon: Share2,

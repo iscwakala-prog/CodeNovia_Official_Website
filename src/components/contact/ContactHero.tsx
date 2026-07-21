@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/SocialIcons";
 import { Button } from "@/components/ui/Button";
 import { contactInfo } from "@/lib/data/contact";
 
@@ -112,66 +112,41 @@ export function ContactHero() {
               size="lg"
               className="gap-2"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
               Chat on WhatsApp
             </Button>
           </motion.div>
         </div>
 
         <motion.div
-          className="relative mx-auto hidden w-full max-w-md lg:block"
+          className="relative mx-auto hidden aspect-square w-full max-w-md lg:block"
           initial={reduce ? false : { opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.25 }}
           aria-hidden
         >
           <div className="absolute inset-[18%] rounded-full bg-accent/25 blur-3xl" />
-          <svg
-            viewBox="0 0 360 360"
-            className="relative h-full w-full drop-shadow-[0_0_40px_rgba(30,155,255,0.35)]"
-          >
-            <defs>
-              <linearGradient id="contactCore" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#12325a" />
-                <stop offset="100%" stopColor="#050f20" />
-              </linearGradient>
-            </defs>
-            <circle
-              cx="180"
-              cy="180"
-              r="120"
-              fill="none"
-              stroke="rgba(61,180,255,0.25)"
-              strokeWidth="1"
-              strokeDasharray="6 8"
-            >
-              {!reduce && (
-                <animateTransform
-                  attributeName="transform"
-                  type="rotate"
-                  from="0 180 180"
-                  to="360 180 180"
-                  dur="40s"
-                  repeatCount="indefinite"
-                />
-              )}
-            </circle>
-            <path
-              d="M180 70 L270 125 V235 L180 290 L90 235 V125 Z"
-              fill="url(#contactCore)"
-              stroke="#3db4ff"
-              strokeWidth="1.6"
+
+          <motion.div
+            className="absolute inset-[8%] rounded-full border border-accent/25"
+            style={{ borderStyle: "dashed" }}
+            animate={reduce ? undefined : { rotate: 360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          />
+          <motion.div
+            className="absolute inset-[16%] rounded-full border border-accent-bright/20"
+            animate={reduce ? undefined : { rotate: -360 }}
+            transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+          />
+
+          <div className="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center">
+            <img
+              src="/brand/codenovia-logo.png"
+              alt=""
+              className="h-[36%] w-[36%] object-contain drop-shadow-[0_0_40px_rgba(30,155,255,0.45)]"
+              aria-hidden
             />
-            <path
-              d="M155 165 L140 180 L155 195 M205 165 L220 180 L205 195"
-              stroke="#7ad0ff"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-            />
-            <circle cx="180" cy="180" r="8" fill="#1e9bff" opacity="0.9" />
-          </svg>
+          </div>
         </motion.div>
       </div>
     </section>

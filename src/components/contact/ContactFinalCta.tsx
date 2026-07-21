@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import { WhatsAppIcon } from "@/components/icons/SocialIcons";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
@@ -31,7 +31,7 @@ export function ContactFinalCta() {
                 size="lg"
                 className="gap-2"
               >
-                <MessageCircle size={18} />
+                <WhatsAppIcon size={18} />
                 Chat on WhatsApp
               </Button>
             </div>
