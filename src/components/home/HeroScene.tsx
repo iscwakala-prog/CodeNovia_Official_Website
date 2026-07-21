@@ -74,121 +74,47 @@ export function HeroScene() {
         </motion.span>
       ))}
 
-      {/* Main SVG core */}
-      <svg
-        viewBox="0 0 420 420"
-        className="relative z-[1] h-full w-full drop-shadow-[0_0_50px_rgba(30,155,255,0.4)]"
-        role="img"
-        aria-label="Animated CodeNovia technology core"
-      >
-        <defs>
-          <linearGradient id="coreBody" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#12325a" />
-            <stop offset="45%" stopColor="#0a1c36" />
-            <stop offset="100%" stopColor="#050f20" />
-          </linearGradient>
-          <linearGradient id="coreEdge" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#7ad0ff" />
-            <stop offset="50%" stopColor="#1e9bff" />
-            <stop offset="100%" stopColor="#5ec4ff" />
-          </linearGradient>
-          <radialGradient id="coreShine" cx="40%" cy="30%" r="60%">
-            <stop offset="0%" stopColor="rgba(94,196,255,0.35)" />
-            <stop offset="100%" stopColor="rgba(94,196,255,0)" />
-          </radialGradient>
-          <filter id="coreGlow" x="-40%" y="-40%" width="180%" height="180%">
-            <feGaussianBlur stdDeviation="5" result="b" />
-            <feMerge>
-              <feMergeNode in="b" />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
+      {/* Centered logo */}
+      <div className="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center">
+        <img
+          src="/brand/codenovia-logo.png"
+          alt=""
+          className="h-[34%] w-[34%] max-w-[200px] object-contain drop-shadow-[0_0_40px_rgba(30,155,255,0.45)]"
+          aria-hidden
+        />
+      </div>
 
-        {/* Hex shell */}
-        <g transform="translate(210 210)">
-          <path
-            d="M0 -130 L112 -65 V65 L0 130 L-112 65 V-65 Z"
-            fill="url(#coreBody)"
-            stroke="url(#coreEdge)"
-            strokeWidth="2.2"
-            filter="url(#coreGlow)"
-          />
-          <path
-            d="M0 -130 L112 -65 V65 L0 130 L-112 65 V-65 Z"
-            fill="url(#coreShine)"
-          />
-          <path
-            d="M0 -96 L82 -48 V48 L0 96 L-82 48 V-48 Z"
-            fill="#06101f"
-            stroke="#3db4ff"
-            strokeWidth="1.4"
-            opacity="0.95"
-          />
-
-          {/* Inner circuit grid */}
-          <g stroke="#3db4ff" strokeWidth="1.4" fill="none" opacity="0.75">
-            <path d="M-48 -10 H-18 V20" />
-            <path d="M48 -10 H18 V20" />
-            <path d="M0 -40 V-8" />
-            <path d="M-36 40 H36" />
-            <path d="M-28 40 V55" />
-            <path d="M28 40 V55" />
-            <circle cx="-18" cy="20" r="3.2" fill="#5ec4ff" />
-            <circle cx="18" cy="20" r="3.2" fill="#5ec4ff" />
-            <circle cx="0" cy="-8" r="3.2" fill="#5ec4ff" />
-          </g>
-
-          {/* Logo brackets */}
-          <g>
-            <path
-              d="M0 -52 L46 -26 V26 L0 52 L-46 26 V-26 Z"
-              fill="#091828"
-              stroke="#5ec4ff"
-              strokeWidth="1.6"
+      {/* Scan line */}
+      {!reduce && (
+        <svg
+          viewBox="0 0 420 420"
+          className="pointer-events-none absolute inset-0 z-[1] h-full w-full"
+          aria-hidden
+        >
+          <defs>
+            <linearGradient id="coreEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#7ad0ff" />
+              <stop offset="50%" stopColor="#1e9bff" />
+              <stop offset="100%" stopColor="#5ec4ff" />
+            </linearGradient>
+          </defs>
+          <rect x="70" y="0" width="280" height="3" fill="url(#coreEdge)" opacity="0.55">
+            <animateTransform
+              attributeName="transform"
+              type="translate"
+              values="0 70; 0 340; 0 70"
+              dur="5s"
+              repeatCount="indefinite"
             />
-            <path
-              d="M-14 -10 L-22 0 L-14 10 M14 -10 L22 0 L14 10"
-              stroke="#7ad0ff"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
+            <animate
+              attributeName="opacity"
+              values="0;0.65;0"
+              dur="5s"
+              repeatCount="indefinite"
             />
-          </g>
-
-          {/* Pins */}
-          <g fill="#1e9bff">
-            {[-78, -46, -14, 18, 50].map((y) => (
-              <g key={y} opacity="0.9">
-                <rect x="-132" y={y} width="18" height="7" rx="1.5" />
-                <rect x="114" y={y} width="18" height="7" rx="1.5" />
-              </g>
-            ))}
-          </g>
-        </g>
-
-        {/* Scan line */}
-        {!reduce && (
-          <g>
-            <rect x="70" y="0" width="280" height="3" fill="url(#coreEdge)" opacity="0.55">
-              <animateTransform
-                attributeName="transform"
-                type="translate"
-                values="0 70; 0 340; 0 70"
-                dur="5s"
-                repeatCount="indefinite"
-              />
-              <animate
-                attributeName="opacity"
-                values="0;0.65;0"
-                dur="5s"
-                repeatCount="indefinite"
-              />
-            </rect>
-          </g>
-        )}
-      </svg>
+          </rect>
+        </svg>
+      )}
 
       {/* Beam sweeps */}
       {!reduce && (
